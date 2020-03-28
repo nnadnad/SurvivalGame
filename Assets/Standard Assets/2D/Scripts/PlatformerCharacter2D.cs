@@ -28,7 +28,7 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-            playerChar = transform.FindChild("Girl");
+            playerChar = transform.Find("Girl");
         }
 
 

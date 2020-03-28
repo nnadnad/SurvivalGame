@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
 
     // for bullet
     public Transform FireBulletPrefab;
+    public Transform FlashPrefab;
     public float effectSpawnRate = 10;
     private float timeToSpawn = 0;
 
@@ -49,6 +50,7 @@ public class Weapon : MonoBehaviour
 
         if (Time.time >= timeToSpawn) {
             Effect();
+            // StartCoroutine("Effect");
             timeToSpawn = Time.time + 1/effectSpawnRate;
         }
 
@@ -58,12 +60,21 @@ public class Weapon : MonoBehaviour
         if (hit.collider != null) {
             Debug.DrawLine (firePointPos, hit.point, Color.red);
             // Debug.Log("Test");
-            Debug.Log("We hit " + hit.collider + " and did " + damage + " damage.");
+            Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
         }
     }
 
 
     void Effect() {
         Instantiate (FireBulletPrefab, firePoint.position, firePoint.rotation);
+        Transform flash = (Transform) Instantiate (FlashPrefab, firePoint.position, firePoint.rotation);
+
+        flash.parent = firePoint;
+
+        float size = Random.Range(0.5f, 1.0f);
+
+        flash.localScale = new Vector3(size,size,size);
+        // yield return 0;
+        Destroy(flash.gameObject, 0.05f);
     }
 }
