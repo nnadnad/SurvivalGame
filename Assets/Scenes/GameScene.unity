@@ -2200,7 +2200,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 631438676}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e77ef8511eabe9f4e81e3f4941c91d9e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3604,7 +3604,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1008902014}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e77ef8511eabe9f4e81e3f4941c91d9e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4036,7 +4036,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1177237360}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e77ef8511eabe9f4e81e3f4941c91d9e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4808,7 +4808,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1291268625}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e77ef8511eabe9f4e81e3f4941c91d9e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -6298,7 +6298,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1614274596}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e77ef8511eabe9f4e81e3f4941c91d9e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -6981,7 +6981,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1794231372}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e77ef8511eabe9f4e81e3f4941c91d9e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7287,7 +7287,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1814510513}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e77ef8511eabe9f4e81e3f4941c91d9e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -8440,6 +8440,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 489357313}
     m_Modifications:
+    - target: {fileID: 7629766228245894526, guid: e7f78ba3a373a3e459bf28e657e098e8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629766228313335876, guid: e7f78ba3a373a3e459bf28e657e098e8,
+        type: 3}
+      propertyPath: FireBulletPrefab
+      value: 
+      objectReference: {fileID: 4135057239350981071, guid: 8e41f6f51e1fefd4f89076f964fc0b9e,
+        type: 3}
+    - target: {fileID: 7629766228313335876, guid: e7f78ba3a373a3e459bf28e657e098e8,
+        type: 3}
+      propertyPath: fireRate
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7629766228313335898, guid: e7f78ba3a373a3e459bf28e657e098e8,
         type: 3}
       propertyPath: m_LocalPosition.x
