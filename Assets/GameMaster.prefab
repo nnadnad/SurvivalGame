@@ -76,3 +76,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefabs: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
   spawnPlayerPoint: {fileID: 8408125481093323559}
+  spawnPrefabs: {fileID: 875266722022302650, guid: f0c09703b997ced459e0cd5c2cd4482c,
+    type: 3}
+  spawnDelay: 2
