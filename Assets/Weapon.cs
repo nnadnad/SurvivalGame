@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
 
     public float fireRate = 0;
-    public  float damage = 10;
+    public  int damage = 10;
     public LayerMask whatToHit;
 
     // for bullet
@@ -56,11 +56,15 @@ public class Weapon : MonoBehaviour
 
         // Effect();
 
-        Debug.DrawLine (firePointPos, (mousePosition - firePointPos)*100, Color.black);
+        // Debug.DrawLine (firePointPos, (mousePosition - firePointPos)*100, Color.black);
         if (hit.collider != null) {
-            Debug.DrawLine (firePointPos, hit.point, Color.red);
+            // Debug.DrawLine (firePointPos, hit.point, Color.red);
             // Debug.Log("Test");
-            Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
+            EnemyControl enemy = hit.collider.GetComponent<EnemyControl>();
+            if (enemy != null) {
+                enemy.DamageEnemy(damage);
+                Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
+            }
         }
     }
 
