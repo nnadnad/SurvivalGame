@@ -7,11 +7,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9169072561495494234}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 959968fe95f4c49418ab6cc1be50bf24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 200
 --- !u!1001 &2019801611909140347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19,6 +20,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 329107860442875844, guid: 8016315d7a5e5c34d97e804162030838,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329107860442875844, guid: 8016315d7a5e5c34d97e804162030838,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329107860442875844, guid: 8016315d7a5e5c34d97e804162030838,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329107860442875844, guid: 8016315d7a5e5c34d97e804162030838,
+        type: 3}
+      propertyPath: m_UseWorldSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329107860442875844, guid: 8016315d7a5e5c34d97e804162030838,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329107860442875844, guid: 8016315d7a5e5c34d97e804162030838,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329107860442875844, guid: 8016315d7a5e5c34d97e804162030838,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329107860442875844, guid: 8016315d7a5e5c34d97e804162030838,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1660174459060785428, guid: 8016315d7a5e5c34d97e804162030838,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -83,6 +124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057491514939832650, guid: 8016315d7a5e5c34d97e804162030838,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6574692157866895786, guid: 8016315d7a5e5c34d97e804162030838,
         type: 3}
