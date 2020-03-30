@@ -14,7 +14,7 @@ public class GameMaster : MonoBehaviour {
 
     public float spawnDelay = 2;
 
-    private void Start() {
+    private void Awake() {
         if (gameMaster == null) {
             gameMaster = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         }

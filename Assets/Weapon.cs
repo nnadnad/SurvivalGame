@@ -20,12 +20,34 @@ public class Weapon : MonoBehaviour
     private float castFire = 0;
     Transform firePoint;
 
-    // Start is called before the first frame update
-    void Start() {
+    // for camera
+    public float cameraShakeAmount = 0.05f;
+    public float cameraShakeLength = 0.1f;
+    CameraShake cameraShake;
+
+
+    private void Awake() {
         firePoint = transform.Find("FireBullet");
         if (firePoint == null) {
             Debug.LogError("No FireBullet!");
         }
+
+    }
+
+    // Start is called before the first frame update
+    void Start() {
+        // firePoint = transform.Find("FireBullet");
+        // if (firePoint == null) {
+        //     Debug.LogError("No FireBullet!");
+        // }
+
+        cameraShake = GameMaster.gameMaster.GetComponent<CameraShake>();
+        if (cameraShake == null) {
+            Debug.LogError("No camera shake script on game master");
+        }
+
+
+
     }
 
     // Update is called once per frame
@@ -123,5 +145,10 @@ public class Weapon : MonoBehaviour
         flash.localScale = new Vector3(size,size,size);
         // yield return 0;
         Destroy(flash.gameObject, 0.05f);
+
+        cameraShake.shake(cameraShakeAmount, cameraShakeLength);
+
+
+
     }
 }
