@@ -17,11 +17,11 @@ public class EnemyControl : MonoBehaviour
                 _currentHealth = Mathf.Clamp(value, 0, maxHealth); 
             }
         }
+        public int damage = 20;
 
         public void Init() {
             currentHealth = maxHealth;
         }
-
 	}
 	
 	public EnemyStats stats = new EnemyStats();
@@ -47,8 +47,13 @@ public class EnemyControl : MonoBehaviour
         if (statusBar != null) {
             statusBar.SetHealth(stats.currentHealth, stats.maxHealth);
         }
-
-
-
 	}
+
+
+    private void OnCollisionEnter2D(Collision2D colliderInfo) {
+        Player player   = colliderInfo.collider.GetComponent<Player>();
+        if (player != null) {
+            player.DamagePlayer(stats.damage);
+        }
+    }
 }
