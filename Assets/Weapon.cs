@@ -87,7 +87,7 @@ public class Weapon : MonoBehaviour
             EnemyControl enemy = hit.collider.GetComponent<EnemyControl>();
             if (enemy != null) {
                 enemy.DamageEnemy(damage);
-                Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
+                // Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
             }
         }
 

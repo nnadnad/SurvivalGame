@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
+
+    public int scoreValue = 10;
 	[System.Serializable]
 	public class EnemyStats {
 		// public int Health = 100;
@@ -19,12 +21,22 @@ public class EnemyControl : MonoBehaviour
         }
         public int damage = 20;
 
+        // public float shakeAmout = 0.1f;
+        // public float shakeLength = 0.1f;
+
         public void Init() {
             currentHealth = maxHealth;
         }
 	}
 	
 	public EnemyStats stats = new EnemyStats();
+
+
+    public Transform deathParticles;
+
+    public float shakeAmout = 0.1f;
+    public float shakeLength = 0.1f;
+
 
     [SerializeField]
     private StatusBar statusBar;
@@ -35,12 +47,17 @@ public class EnemyControl : MonoBehaviour
         if (statusBar != null) {
             statusBar.SetHealth(stats.currentHealth, stats.maxHealth);
         }
+
+        if (deathParticles == null) {
+            Debug.LogError("No death particle on enemy");
+        }
     }
 	
 	public void DamageEnemy (int damage) {
 		stats.currentHealth -= damage;
 		if (stats.currentHealth <= 0)
 		{
+            Score.scorePlayer += scoreValue;
 			GameMaster.KillEnemy (this);
 		}
 
