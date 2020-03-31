@@ -34,8 +34,8 @@ public class EnemyControl : MonoBehaviour
 
     public Transform deathParticles;
 
-    public float shakeAmout = 0.1f;
-    public float shakeLength = 0.1f;
+    public float shakeAmout = 0.01f;
+    public float shakeLength = 0.01f;
 
 
     [SerializeField]

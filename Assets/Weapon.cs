@@ -22,9 +22,13 @@ public class Weapon : MonoBehaviour
 
     // for camera
     public float cameraShakeAmount = 0.05f;
-    public float cameraShakeLength = 0.1f;
+    public float cameraShakeLength = 0.01f;
     CameraShake cameraShake;
 
+
+    public string weaponSound = "Default";
+
+    AudioManager audioManager;
 
     private void Awake() {
         firePoint = transform.Find("FireBullet");
@@ -44,6 +48,11 @@ public class Weapon : MonoBehaviour
         cameraShake = GameMaster.gameMaster.GetComponent<CameraShake>();
         if (cameraShake == null) {
             Debug.LogError("No camera shake script on game master");
+        }
+
+        audioManager = AudioManager.instance;
+        if (audioManager == null) {
+            Debug.LogError("no audio manager found");
         }
 
 
@@ -145,8 +154,12 @@ public class Weapon : MonoBehaviour
         flash.localScale = new Vector3(size,size,size);
         // yield return 0;
         Destroy(flash.gameObject, 0.05f);
-
         cameraShake.shake(cameraShakeAmount, cameraShakeLength);
+
+
+        audioManager.PlaySound(weaponSound);
+
+
 
 
 
